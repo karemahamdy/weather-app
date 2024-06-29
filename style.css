@@ -96,6 +96,7 @@ main li:nth-child(3){
     background-color: #48567b;
 }
 main.error{
+  
     animation: errorEffect 0.3s linear 1;
 }
 @keyframes errorEffect{

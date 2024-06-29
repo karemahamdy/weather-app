@@ -53,10 +53,13 @@ const updateWeatherUI = (data) => {
 
 // Function to handle errors
 const showError = () => {
-    mainElement.classList.add('error');
-    setTimeout(() => {
-        mainElement.classList.remove('error');
-    }, 1000);
+    cityElement.querySelector('figcaption').innerText = 'not found';
+    cityElement.querySelector('img').src = '';
+    temperatureElement.querySelector('img').src = '';
+    temperatureElement.querySelector('span').innerText = '';
+    descriptionElement.innerText = '';
+    cloudsElement.innerText = '';
+    humidityElement.innerText = '';
 };
 
 // Function to initialize the app with a default city
