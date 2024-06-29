@@ -60,9 +60,21 @@ const showError = () => {
 };
 
 // Function to initialize the app with a default city
-// const initApp = () => {
-//     const defaultCity = 'Washington';
-//     fetchWeather(defaultCity);
-// };
+const clearWeatherUI = () => {
+  cityElement.querySelector('figcaption').innerText = '';
+  cityElement.querySelector('img').src = '';
+  temperatureElement.querySelector('img').src = '';
+  temperatureElement.querySelector('span').innerText = '';
+  descriptionElement.innerText = '';
 
-// initApp();
+  cloudsElement.innerText = '';
+  humidityElement.innerText = '';
+  pressureElement.innerText = '';
+};
+
+// Function to initialize the app and clear data
+const init = () => {
+  clearWeatherUI();
+};
+
+init();
